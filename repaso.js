@@ -26,8 +26,8 @@ console.log(copiaTexto)
 //copiar las estructuras de objetos
 let copiaArreglo = arreglo
 copiaArreglo.push(3)
-console.log(arreglo)
-console.log(copiaArreglo)
+console.log(arreglo) //se altera la variable original
+console.log(copiaArreglo) //no copia porque es un apuntador
 
 //manera 1 de copiar un arreglo (educativa)
 let arregloTemp= []
@@ -39,13 +39,13 @@ console.log("arreglo: ", arreglo)
 console.log("arregloTemp: ", arregloTemp)
 
 //manera 2 de copiar un array
-let arregloTemp2 = arreglo.slice(1,3)
+let arregloTemp2 = arreglo.slice() //se puede copiar una parte con slice(1,3)
 console.log("\n ***************** \n")
 //arregloTemp2.push("verificando el cambio")
 console.log("arreglo: ", arreglo)
 console.log("arregloTemp2: ", arregloTemp2)
 
-//manera de copiar objetos
+//lo que pasa con los objetos
 let objDePrueba = {
     academia: "4Geeks",
     inicio: "18-01-23"
@@ -53,8 +53,8 @@ let objDePrueba = {
 
 let copiaObj = objDePrueba
 copiaObj.academia = "Google"
-console.table(objDePrueba)
-console.table(copiaObj)
+console.table(objDePrueba) //se altera la variable original
+console.table(copiaObj) //no copia porque es un apuntador
 
 //manera de copiar objetos
 let copiaDefinitiva = JSON.stringify(objDePrueba) //convertir el obj en string
