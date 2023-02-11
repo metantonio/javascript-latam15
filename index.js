@@ -45,7 +45,7 @@ const eliminarUltimo = () =>{
 const eliminarEspecifico = () => {
     let valorInput = document.querySelectorAll("input")
     //console.log(valorInput)
-    let texto = valorInput[valorInput.length-1]["value"]
+    let texto = valorInput[valorInput.length-1]["value"] //el valor del último input (el segundo input, pues sólo hay 2)
     //console.log(valorInput[valorInput.length-1]["value"])
     let divResultado = document.querySelector("#seccion-resultado")
     //console.log(divResultado.childNodes)
@@ -53,8 +53,8 @@ const eliminarEspecifico = () => {
     for(let i=0; i< divResultado.childNodes.length; i++){
         
         let textoLI = String(divResultado.childNodes[i].innerHTML)
-        if(textoLI.includes(texto)){
-            divResultado.removeChild(divResultado.childNodes[i]) //borra específicamente el texto que incluya la frase
+        if(textoLI.includes(texto)){ //si en el texto del LI hay una coincidencia con el segundo input dará true
+            divResultado.removeChild(divResultado.childNodes[i]) //borra específicamente el LI seleccionado según índice, (empiezan en 0)
         }
     }
 }
