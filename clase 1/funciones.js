@@ -22,3 +22,5 @@ const multiplicacion = (a, b) => {
 
 let resultadoMultiplicacion = multiplicacion(3, 3)
 console.log("3*3= ",resultadoMultiplicacion)
+
+module.export.multiplicacion = multiplicacion
